@@ -11,7 +11,7 @@
 
 const jobsListigSection = document.querySelector(".jobs-listings");
 
-jobsListigSection.addEventListener("click", function(event){
+jobsListigSection?.addEventListener("click", function(event){ //el ? es optional chaning que comprueba si una variable es null o undefinen
     console.log(event.target)//Event.target devuelve el elemtno al que se le da click
     const element = event.target
 
