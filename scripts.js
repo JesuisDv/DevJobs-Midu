@@ -17,8 +17,21 @@ jobsListigSection?.addEventListener("click", function(event){ //el ? es optional
 
     if(element.classList.contains("button-apply-job")){
         element.textContent= "Aplicado"
-        element.style.backgroundColor = "green"
-        element.style.cursor = "not-allowed"
+        element.classList.add( 'is-applied')
         element.disabled = true
     }
+})
+
+const filter = document.querySelector('#filter-location')
+const mensaje = document.querySelector('#filter-selected-value')
+
+filter.addEventListener('change', function(){
+    const selectedValue = filter.value
+
+    if(selectedValue){
+        mensaje.textContent  = `Haz seleccionado ${selectedValue}`
+    }else{
+        mensaje.textContent = ''
+    }
+
 })
