@@ -235,6 +235,17 @@ main > section:nth-child(2) h2 {
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1rem;
+
+  /* Alinear con el contenedor de listados */
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 1rem;
+
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 main > section:nth-child(2) > div > div:first-child > p {
@@ -533,30 +544,23 @@ button {
   border-radius: 0.5rem;
   background-color: var(--primary);
   color: white;
-  font-weight: 400;
+  font-weight: 700;
   border: none;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background-color 0.2s;
   font-family: inherit;
   font-size: 1rem;
   white-space: nowrap;
-
-  &:hover, /* pseudo-clase que significa que el ratón está encima */
-  &:focus { /* pseudo-clase que significa que el elemento tiene el foco */
-    background-color: var(--primary-hover);
-    outline: 2px solid white;
-    outline-offset: 2px;
-  }
-
-  &:active { 
-    transform: scale(0.90)
-  }
-
-  &:disabled {
-    opacity: .5;
-    pointer-events: none;
-  }
 }
+
+&:hover,
+&:focus {
+  background-color: var(--primary-hover);
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+
 
 /* Features Section */
 main > section:nth-child(2) {
@@ -568,8 +572,9 @@ main > section:nth-child(2) {
     gap: 2px;
     flex-direction: column;
 
-    h2 {
+    h2{
       margin-bottom: 0;
+      
     }
 
     p {
@@ -588,6 +593,18 @@ main > section:nth-child(2) h2 {
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1rem;
+
+  /* Alinear con el contenedor de listados */
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 1rem;
+  margin-bottom: 20px;
+
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 main > section:nth-child(2) > div > div:first-child > p {
@@ -779,3 +796,59 @@ article {
     pointer-events: none;
   }
 }
+
+#empleo1Sec{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 2rem;
+
+  p{
+    text-align: left;
+    color: #09f;
+
+  }
+
+  a{
+    color: white;
+  }
+
+
+  #title-empleo1{
+    display: flex;
+    margin: 20px;
+    justify-content: space-around;
+    text-align: left;
+
+    h3{
+      color: gray;
+      font-weight: 400;
+    }
+
+    button{
+      background-color: var(--primary-light);
+    }
+  }
+
+  #infoBox{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 6rem;    
+    align-items: start;
+
+    p{
+      color: white;
+    }
+  }
+}
+
+
+
+
+
+
+
+
